@@ -35,7 +35,7 @@ function App() {
         `Q: ${q}\nA: ${finalAnswers[i]}`
       ).join("\n\n");
 
-      const response = await fetch("http://localhost:3000/analyze", {
+      const response = await fetch("https://personality-os.onrender.com/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ answers: prompt })
